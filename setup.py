@@ -23,15 +23,15 @@ def collect_files(target, root):
             for dp, dn, filenames in os.walk(root)]
 
 
-setup(name='pygio2-win',
+setup(name='pygtk2-win',
       version=version.getVersion(),
-      description='Python GObject IO package for Windows.',
+      description='Python Gtk-2.0 bindings package for Windows.',
       keywords='',
       author='Christian Fobel',
       author_email='christian@fobel.net',
-      url='https://github.com/wheeler-microfluidics/pygio2-win',
+      url='https://github.com/wheeler-microfluidics/pygtk2-win',
       license='GPL',
       install_requires=[],
       data_files=collect_files(os.path.join(rel_site_packages, 'gtk-2.0'),
-                               'gio'),
+                               'gtk'),
       zip_safe=False)
