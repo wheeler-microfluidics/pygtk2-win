@@ -31,7 +31,8 @@ setup(name='pygtk2-win',
       author_email='christian@fobel.net',
       url='https://github.com/wheeler-microfluidics/pygtk2-win',
       license='GPL',
-      install_requires=[],
-      data_files=collect_files(os.path.join(rel_site_packages, 'gtk-2.0'),
-                               'gtk'),
+      install_requires=['gtk2-win', 'pygio2-win', 'pyglib2-win',
+                        'pygobject2-win'],
+      data_files=[(rel_site_packages, ['pygtk.py'])] +
+      collect_files(os.path.join(rel_site_packages, 'gtk-2.0'), 'gtk'),
       zip_safe=False)
